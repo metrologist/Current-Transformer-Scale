@@ -1,0 +1,1 @@
+The BUILDUP class contains methods for processing input blocks of data and for preparing output tables for an output spreadsheet. All analysis formulas are contained in the imported TWOSTAGE object.

@@ -1,0 +1,17 @@
+This is the documentation for code that supports technical procedure E.056.005 for the current transformer scale.
+
+Data is collected in Excel spread sheets and it is important to ensure that data is loaded into the correct columns. It is likely that data cannot be collected in a strict order and so it remains necessary to manually identify the blocks of data that will be used for the final calibration calculation. Manual identification of data blocks, workbook and sheet names is made in the script 'main_ct_scale.py' that pulls together all the data for analysis and reporting. 
+
+There are many options for modifying the input and output, but the equations in the TWOSTAGE class should remain unchanged, regardless of the data handling, and match the measurement equations in the technical procedure. Source code for twostage is included in chapter 3.1 as it includes values of key uncertainty terms as well as the measurement equations. Chapter 3.2 contains sourcecode for main_ct_scale.py as it shows the step by step calculation process for specific blocks of data and includes specific values of measured transformer impedances.
+
+The main script imports classes from from ctscale_mod, ExcelPython and GTC. Critical calculations for the measurement equations are all in the twostage module which is imported by ctscale_mod.
+
+Blair's GTC is a vital module that is used but not documented here. The ExcelPyhton module relies on openpyxl and is used in some of my other calibration programmes. This is the version in the CT project and there is a risk that it might differ from identically named versions used in the impedance area.
+
+Connection of the SR830 to the common resistor might easily be reversed when reconnecting the system. It is vital to do a polarity check by leaking some current across the secondary. Polarity settings can be altered in TWOSTAGE.buildup in the twostage module, but it is best to maintain SR830 connections consistent with previous calibrations.
+
+Within the CTs project there is a transformer module in the early stages of development. The intent with this module is to include models of the two-stage CTs which would facilitate interpolation, burdend dependence and improved uncertainty estimation. Using this module will also facilitate a dictionary-based approach to selecting ratios. Ultimately all the calibration results will be included in this module to make it easy to incorporate the two-stage transformers when calibrating other transformers.
+
+It is desirable that an improved template for data collection is prepared so that it is easier to identify essential data blocks for use in data analysis. Repeats and other investigations should be gathered on separate sheets and then summarised into template sheet ready for analysis.
+
+[Note that this document is created by running the make.bat batch file, 'make latexpdf'.]

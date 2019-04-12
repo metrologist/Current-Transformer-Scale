@@ -1,0 +1,105 @@
+This software relies on Excel spreadsheets for both input and output of information. Formatting of tables to meet reporting requirements also occurs in Excel. We describe this process here as used for generating the 2018 calibration report.
+
+Run main_ct_scale.py. The console output, below is intended to simply give an indication that the analysis is occurring.
+
+.................................................
+
+C:\Users\k.jones\AppData\Local\Continuum\anaconda2\python.exe Y:/Staff/KJ/PycharmProjects/CTs/main_ct_scale.py
+
+Starting ctscale_mod.py
+
+Step 1
+
+Step 2
+
+Step 3
+
+Step 4
+
+Step 5a
+
+Step 5b
+
+Coupling measurements 1a
+
+cur prop =  [1.0235557286641896, 1.0048211663335513, 0.9811191951530384, 0.9905039098492211]
+
+Coupling measurements 1b
+
+cur prop =  [0.9269624014370466, 0.9572372238124266, 0.9512034669609294, 1.0849361230590082, 1.0796607847305886]
+
+Coupling measurements 2a
+
+cur prop =  [1.0636550454869995, 0.914550499839336, 0.9507451316981566, 1.0710493229755083]
+
+Coupling measurements 3a
+
+cur prop =  [0.9951028422948835, 0.9950691447093982, 0.9999735093520836, 1.011367732764118, 0.9984867708795164]
+
+Coupling measurements 2b
+
+cur prop =  [0.9999352253468775, 1.0000647746531226]
+
+capacitance error =  ?(-0.0000000108+0.0000001495j)? ?(-0.0000000086+0.0000001196j)?
+
+capacitance error =  ?(-0.00000000000079+0.00000000846165j)? 0
+
+
+
+This is the Tc analysis
+
+the Tc sign is  1.0
+
+at 53 Hz
+125 4.293177463195822e-07 3.7955007417276686e-07
+
+120 4.3254834824404494e-07 3.7958673241203746e-07
+
+100 4.309251849312785e-07 3.768848153505325e-07
+
+60 4.151134502216592e-07 3.7455281844716254e-07
+
+40 4.09375032373103e-07 3.7612751436757117e-07
+
+20 3.911428906510569e-07 4.1953355831745714e-07
+
+10 3.9214484698044627e-07 3.789843130608994e-07
+
+5 4.080666750944237e-07 3.769099107589338e-07
+
+1 1.5753630919765793e-06 2.074589821400807e-06
+
+magnetic2a  ?(-0.000000106-0.000000184j)?
+
+capacitance error2a =  ?(-0.00000000288+0.00000000653j)? ?(-0.00000000230+0.00000000523j)?
+
+Create tables for Ta and Tb in the output Excel files
+
+Create tables for Tc measured against Ta
+
+
+ Check available series/parallel corrections
+ 
+cap_error2a_sp ?(-0.00000000230+0.00000000523j)?
+
+cap_errora_sp ?(-0.0000000086+0.0000001196j)?
+
+cap_errorb_sp 0
+
+magnetic1a_sp ?(0.000000000073+0.000000001701j)?
+
+magnetic1b_sp 0
+
+magnetic2a_sp ?(-0.000000097-0.000000163j)?
+
+magnetic2b_sp 0
+
+magnetic3a_sp 0
+
+Process finished with exit code 0
+
+.................................................
+
+Next check that the Y:/Staff/KJ/PycharmProjects/CTs/ directory now has three updated spreadsheets TwoStageResults2018_c_new.xlsx, TwoStageResults2018_new.xlsx and uncertainties.xlsx. The uncertainties spreadsheet is not essential for the report and just represents one set of uncertainty of budgets with the chosen set being alterable in the code.
+
+Copy the my_sheet_name worksheet from TwoStageResults2018_new.xlsx into the PythonResults worksheet of 2018Test.xlsx. Tables 1 to 12 are then available for image copying from the Tables worksheet.  Next copy the my_sheet_name worksheet from TwoStageResults2018_c_new.xlsx into the PythonResults worksheet in  1A_CT_cal_2018.xlsm. Table 13 is then available for image copying from the Table worksheet. Copying Excel tables and then pasting them as an image into Word has proved to be the most reliable way of retaining all table formatting. 

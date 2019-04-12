@@ -1,0 +1,12 @@
+Note that common uncertainty estimates as initially estimated in 2003 and used in 2012 are included in the class initialisation. Results from the 'couple' and 'ishare' methods are used in the 'magneticsp' method to give the magnetic series parallel error. These methods are used by the 'magnetic_coupling' method to calculate the errors for a block of data at different excitation levels.
+
+For the four-section windings the program returns a series/parallel error as well as the parallel error. This is the second value of a tuple and is set to 0 when the winding does not have a series/parallel correction. The series/parallel error was not estimated in earlier versions of the technical procedure.
+
+For the 2018 run the capacitive parallel error of winding P2b was not determined, but an uncertainty term of 0.1 ppm for each of the real and imaginary components has been added.
+
+The 'newcapsp' method is the corrected version of 'capsp' that gives the series-parallel capacitive error.
+
+Tc calibration requires lower excitation levels of Ta by a factor of five, hence the 'one_fifth' and 'interp methods.
+
+Ultimately, the 'buildup' method works through all the steps for Ta and Tb.
+
